@@ -93,8 +93,15 @@ final class WhatsNewViewController: UIViewController, UICollectionViewDataSource
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemBackground
-        collectionView.register(WhatsNewCollectionViewCell.self, forCellWithReuseIdentifier: WhatsNewCollectionViewCell.reuseIdentifier)
-        collectionView.register(SettingsSectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SettingsSectionHeaderView.reuseIdentifier)
+        collectionView.register(
+            WhatsNewCollectionViewCell.self,
+            forCellWithReuseIdentifier: WhatsNewCollectionViewCell.reuseIdentifier
+        )
+        collectionView.register(
+            SettingsSectionHeaderView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: SettingsSectionHeaderView.reuseIdentifier
+        )
         return collectionView
     }
     
@@ -109,8 +116,18 @@ final class WhatsNewViewController: UIViewController, UICollectionViewDataSource
     private func configureCollectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: view.frame.size.width - (Constants.padding * 2), height: Constants.cellHeight) // Customize as needed
-        layout.sectionInset = UIEdgeInsets(top: Constants.sectionInset, left: Constants.sectionInset, bottom: Constants.sectionInset, right: Constants.sectionInset)
+        layout.itemSize = CGSize(
+            width: view.frame.size.width - (
+                Constants.padding * 2
+            ),
+            height: Constants.cellHeight
+        ) // Customize as needed
+        layout.sectionInset = UIEdgeInsets(
+            top: Constants.sectionInset,
+            left: Constants.sectionInset,
+            bottom: Constants.sectionInset,
+            right: Constants.sectionInset
+        )
         return layout
     }
 
@@ -187,6 +204,9 @@ extension WhatsNewViewController: UICollectionViewDelegateFlowLayout {
     
     /// Asks the delegate for the size of the header view in the specified section.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: Constants.collectionViewCellHeight)
+        return CGSize(
+            width: collectionView.frame.width,
+            height: Constants.collectionViewCellHeight
+        )
     }
 }

@@ -165,7 +165,13 @@ final class StatsSettingsViewController: UIViewController {
     private func setupNavBar() {
         self.title = "Stat Theme Settings".localized
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissModal))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(
+                dismissModal
+            )
+        )
     }
     
     private func loadSelectedOption() {

@@ -39,11 +39,26 @@ final class CustomProgressBar: UIView {
         let totalWidth = UIScreen.main.bounds.width - 40
         var minProgressWidth = 0.0
         var maxProgressWidth = 0.0
-        self.minProgressView.frame = CGRect(x: 0, y: 0, width: minProgressWidth, height: 20)
-        self.maxProgressView.frame = CGRect(x: 0, y: 0, width: maxProgressWidth, height: 20)
+        self.minProgressView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: minProgressWidth,
+            height: 20
+        )
+        self.maxProgressView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: maxProgressWidth,
+            height: 20
+        )
         UIView.animate(withDuration: 1.0) {
             maxProgressWidth = (totalWidth * maxValue) / 200
-            self.maxProgressView.frame = CGRect(x: 0, y: 0, width: maxProgressWidth, height: 20)
+            self.maxProgressView.frame = CGRect(
+                x: 0,
+                y: 0,
+                width: maxProgressWidth,
+                height: 20
+            )
         } completion: { _ in
             UIView.animate(withDuration: 1.0) {
                 minProgressWidth = (totalWidth * minValue) / 200

@@ -59,7 +59,12 @@ public struct CloudStatusDetails {
     ///   - name: The name of the component or aspect.
     ///   - status: The current status as a string.
     ///   - cloudStatus: An optional `CKAccountStatus` value representing the iCloud account status.
-    public init(imageName: String, name: String, status: String, cloudStatus: CKAccountStatus? = nil) {
+    public init(
+        imageName: String,
+        name: String,
+        status: String,
+        cloudStatus: CKAccountStatus? = nil
+    ) {
         self.imageName = imageName
         self.name = name
         self.status = status

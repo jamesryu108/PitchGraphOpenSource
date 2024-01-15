@@ -188,8 +188,6 @@ extension MinMaxAdjusterView {
         self.maxValue = maxValue
         
         updateTextFields()
-        //slider.setMinValue(Double(minValue))
-        //slider.setMaxValue(Double(maxValue))
         
         minStepper.value = minValue
         maxStepper.value = maxValue

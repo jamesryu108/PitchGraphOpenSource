@@ -13,7 +13,13 @@ public struct Position: Identifiable {
     public var x: CGFloat
     public var y: CGFloat
     public var isEnabled: Bool
-    public init(id: String, name: String, x: CGFloat, y: CGFloat, isEnabled: Bool) {
+    public init(
+        id: String,
+        name: String,
+        x: CGFloat,
+        y: CGFloat,
+        isEnabled: Bool
+    ) {
         self.id = id
         self.name = name
         self.x = x

@@ -162,7 +162,6 @@ final class UserDefaultsManager: UserDefaultsManaging {
     /// If a row value is found, it constructs an `IndexPath` using this row and section 0.
     /// Returns `nil` if no previously selected option is found in UserDefaults for the given key.
     func loadSelectedOptionIndex(for key: UserDefaultsKey) async -> IndexPath? {
-        //Task {
             do {
                 let test = try await load(for: .selectedOptionIndex, as: IndexPath.self)
                 print("test: \(test)")
@@ -170,10 +169,7 @@ final class UserDefaultsManager: UserDefaultsManaging {
             } catch {
                 debugPrint("debug \(error.localizedDescription)")
             }
-        //}
-//        if let indexPath = defaults.value(forKey: key.rawValue) as? IndexPath {
-//            return indexPath
-//        }
+
         return nil
     }
 }

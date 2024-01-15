@@ -206,7 +206,6 @@ extension SettingsViewController: UICollectionViewDelegate {
         case .iCloudStatus:
             coordinator?.cloudScreen(navigationController: navigationController)
         case .whatsNew:
-            //coordinator?.navigateToWhatsNew()
             coordinator?.whatsNewScreen(navigationController: navigationController)
         }
     }

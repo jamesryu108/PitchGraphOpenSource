@@ -288,7 +288,6 @@ final class PlayerSearchViewController: UIViewController {
         )
         playerView.modalPresentationStyle = .pageSheet
         playerView.isModalInPresentation = true
-//        presentModal(UINavigationController(rootViewController: playerView), animated: true)
         coordinator?.presentModal(UINavigationController(rootViewController: playerView), animated: true)
     }
     

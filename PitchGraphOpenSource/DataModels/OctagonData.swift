@@ -11,7 +11,11 @@ public struct OctagonData {
     public var category: String
     public var rating: Double
     public var color: UIColor
-    public init(category: String, rating: Double, color: UIColor) {
+    public init(
+        category: String,
+        rating: Double,
+        color: UIColor
+    ) {
         self.category = category
         self.rating = rating
         self.color = color

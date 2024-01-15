@@ -319,16 +319,55 @@ final class ParameterViewController: UIViewController {
         
         // Update your sliders with these loaded values
         // Using lowerBound and upperBound to access the range values
-        ageSliderView.setValues(minValue: CGFloat(parameters.ageRange.lowerBound),
-                                maxValue: CGFloat(parameters.ageRange.upperBound))
-        abilitySliderView.setValues(minValue: CGFloat(parameters.abilityRange.lowerBound),
-                                    maxValue: CGFloat(parameters.abilityRange.upperBound))
-        potentialSliderView.setValues(minValue: CGFloat(parameters.potentialRange.lowerBound),
-                                      maxValue: CGFloat(parameters.potentialRange.upperBound))
+        ageSliderView.setValues(
+            minValue: CGFloat(
+                parameters.ageRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.ageRange.upperBound
+            )
+        )
+        abilitySliderView.setValues(
+            minValue: CGFloat(
+                parameters.abilityRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.abilityRange.upperBound
+            )
+        )
+        potentialSliderView.setValues(
+            minValue: CGFloat(
+                parameters.potentialRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.potentialRange.upperBound
+            )
+        )
         
-        ageStepperView.setValues(minValue: CGFloat(parameters.ageRange.lowerBound), maxValue: CGFloat(parameters.ageRange.upperBound))
-        abilityStepperView.setValues(minValue: CGFloat(parameters.abilityRange.lowerBound), maxValue: CGFloat(parameters.abilityRange.upperBound))
-        potentialStepperView.setValues(minValue: CGFloat(parameters.potentialRange.lowerBound), maxValue: CGFloat(parameters.potentialRange.upperBound))
+        ageStepperView.setValues(
+            minValue: CGFloat(
+                parameters.ageRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.ageRange.upperBound
+            )
+        )
+        abilityStepperView.setValues(
+            minValue: CGFloat(
+                parameters.abilityRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.abilityRange.upperBound
+            )
+        )
+        potentialStepperView.setValues(
+            minValue: CGFloat(
+                parameters.potentialRange.lowerBound
+            ),
+            maxValue: CGFloat(
+                parameters.potentialRange.upperBound
+            )
+        )
         
         // Assuming you have an instance of OrderByPickerView named orderByPickerView
         orderByPickerView.setCurrentSortOption(parameters.sortOption) { error in

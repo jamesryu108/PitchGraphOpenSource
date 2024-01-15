@@ -11,7 +11,10 @@ public struct WhatsNewData {
     public let versionNumber: Double
     public let whatsNewDetails: [String]
     
-    public init(versionNumber: Double, whatsNewDetails: [String]) {
+    public init(
+        versionNumber: Double,
+        whatsNewDetails: [String]
+    ) {
         self.versionNumber = versionNumber
         self.whatsNewDetails = whatsNewDetails
     }

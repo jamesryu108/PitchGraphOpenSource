@@ -206,20 +206,11 @@ final class PlayerSearchViewController: UIViewController {
     ) {
         Task {
             do {
-                #if DEBUG
-                try await viewModel.getPlayers(
-                    name: name,
-                    searchParameters: searchParameters,
-                    isDebug: true
-                )
-                #else
-                
                 try await viewModel.getPlayers(
                     name: name,
                     searchParameters: searchParameters,
                     isDebug: false
                 )
-                #endif
             } catch {
                 showAlert(title: "Error".localized, message: error.localizedDescription, preferredStyle: .alert)
             }

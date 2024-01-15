@@ -1,15 +1,15 @@
 //
-//  MentalAttributeCell.swift
+//  HiddenAttributeCell.swift
 //  PitchGraphOpenSource
 //
-//  Created by James Ryu on 2024-01-14.
+//  Created by James Ryu on 2024-01-15.
 //
 
 import UIKit
 
-/// `MentalAttributeCell` is a custom `UICollectionViewCell` designed to display mental attributes in a collection view. It conforms to `FontAdjustable` and `ReusableCellConfiguring` protocols.
-final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableCellConfiguring {
-
+/// `HiddenAttributeCell` is a custom `UICollectionViewCell` designed to display hidden attributes in a collection view. It conforms to `FontAdjustable` and `ReusableCellConfiguring` protocols.
+final class HiddenAttributeCell: UICollectionViewCell, FontAdjustable, ReusableCellConfiguring {
+    
     // MARK: - Constants
     /// Constants used for layout and styling within the cell.
     enum Constants {
@@ -29,16 +29,16 @@ final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableC
     
     // MARK: - UI Components
     /// UILabels for displaying the attribute's name and score.
-    private var nameLabel: AttributeLabel!
-    private var scoreLabel: AttributeLabel!
+    var nameLabel: AttributeLabel!
+    var scoreLabel: AttributeLabel!
     
     // MARK: - Initializers
     /// Custom initializer for the cell.
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        adjustFontsSize()
         setupFontSizeAdjustmentObserver()
+        adjustFontsSize()
     }
     
     /// Required initializer for decoding the cell from a nib or storyboard (not implemented).
@@ -54,19 +54,22 @@ final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableC
         scoreLabel = AttributeLabel(frame: CGRect(x: nameLabel.frame.maxX, y: 0, width: self.frame.width * Constants.scoreLabelWidthMultiplier, height: self.frame.height))
         
         nameLabel.textAlignment = .natural
-        scoreLabel.textAlignment = .right
+        nameLabel.isAccessibilityElement = true
+        nameLabel.accessibilityHint = "Name of the hidden attribute".localized
         
-        // Adding nameLabel and scoreLabel to the cell's contentView.
+        scoreLabel.textAlignment = .right
+        scoreLabel.isAccessibilityElement = true
+        scoreLabel.accessibilityHint = "Score of the hidden attribute".localized
+        
         self.contentView.addSubviews(nameLabel, scoreLabel)
     }
     
-    // MARK: - Cell Configuration
-    /// Configures the cell with a `MentalAttribute` object.
+    /// Configures the cell with a `HiddenAttribute` object.
     /// - Parameters:
-    ///   - attribute: The `MentalAttribute` object used to configure the cell.
+    ///   - attribute: The `HiddenAttribute` object used to configure the cell.
     ///   - index: The index of the cell in the collection view.
     func configure(
-        with attribute: MentalAttribute,
+        with attribute: HiddenAttribute,
         index: Int,
         option: Int
     ) {
@@ -81,13 +84,9 @@ final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableC
             nameLabel.backgroundColor = .systemGray6
             scoreLabel.backgroundColor = .systemGray6
         }
-        scoreLabel.isAccessibilityElement = true
-        scoreLabel.accessibilityHint = "The score is out of 20".localized
+        
         // Changing scoreLabel text color based on the attribute score.
-        scoreLabel.textColor = colorForScore(
-            attribute.score,
-            option: option
-        )
+        scoreLabel.textColor = colorForScore(attribute.score, option: option)
     }
     
     private func colorForScore(_ score: Int, option: Int) -> UIColor {
@@ -131,7 +130,7 @@ final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableC
     
     // MARK: - Font Size Adjustment Method
     /// Adjusts the font size of labels based on accessibility settings.
-    @objc func adjustFontsSize() {
+    func adjustFontsSize() {
         adjustFontSize(
             for: nameLabel,
             minFontSize: Constants.minFontSizeNameLabel,
@@ -157,4 +156,3 @@ final class MentalAttributeCell: UICollectionViewCell, FontAdjustable, ReusableC
                                                object: nil)
     }
 }
-

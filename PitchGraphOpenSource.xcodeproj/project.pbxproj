@@ -123,6 +123,14 @@
 		9E5701F52B55419400F61C29 /* LegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5701F42B55419400F61C29 /* LegendView.swift */; };
 		9E5701F72B556C0300F61C29 /* PlayerSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5701F62B556C0300F61C29 /* PlayerSearchCoordinator.swift */; };
 		9E6022472B55E1C800EB7DED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6022492B55E1C800EB7DED /* Localizable.strings */; };
+		9E60224E2B55F24000EB7DED /* GoalKeeperAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60224D2B55F24000EB7DED /* GoalKeeperAttributeCell.swift */; };
+		9E6022502B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60224F2B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift */; };
+		9E6022522B55F27500EB7DED /* StatsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022512B55F27500EB7DED /* StatsCategory.swift */; };
+		9E6022542B55F2B700EB7DED /* HiddenAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022532B55F2B700EB7DED /* HiddenAttributeCell.swift */; };
+		9E6022562B55F2D000EB7DED /* TwoHiddenAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022552B55F2D000EB7DED /* TwoHiddenAttributeCell.swift */; };
+		9E6022582B55F30E00EB7DED /* TwoMentalAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022572B55F30E00EB7DED /* TwoMentalAttributeCell.swift */; };
+		9E60225A2B55F36500EB7DED /* PhysicalAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */; };
+		9E60225C2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */; };
 		9E608F502B5349F3007A1C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F4F2B5349F3007A1C5E /* AppDelegate.swift */; };
 		9E608F522B5349F3007A1C5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F512B5349F3007A1C5E /* SceneDelegate.swift */; };
 		9E608F572B5349F3007A1C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E608F552B5349F3007A1C5E /* Main.storyboard */; };
@@ -270,6 +278,14 @@
 		9E60224A2B55E1EA00EB7DED /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		9E60224B2B55E1EA00EB7DED /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9E60224C2B55E1EA00EB7DED /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E60224D2B55F24000EB7DED /* GoalKeeperAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalKeeperAttributeCell.swift; sourceTree = "<group>"; };
+		9E60224F2B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoGoalKeeperAttributeCell.swift; sourceTree = "<group>"; };
+		9E6022512B55F27500EB7DED /* StatsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCategory.swift; sourceTree = "<group>"; };
+		9E6022532B55F2B700EB7DED /* HiddenAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenAttributeCell.swift; sourceTree = "<group>"; };
+		9E6022552B55F2D000EB7DED /* TwoHiddenAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHiddenAttributeCell.swift; sourceTree = "<group>"; };
+		9E6022572B55F30E00EB7DED /* TwoMentalAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoMentalAttributeCell.swift; sourceTree = "<group>"; };
+		9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAttributeCell.swift; sourceTree = "<group>"; };
+		9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPhysicalAttributeCell.swift; sourceTree = "<group>"; };
 		9E608F4C2B5349F3007A1C5E /* PitchGraphOpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchGraphOpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E608F4F2B5349F3007A1C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E608F512B5349F3007A1C5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -448,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				9E5701302B54E3D100F61C29 /* ResultCell.swift */,
+				9E6022572B55F30E00EB7DED /* TwoMentalAttributeCell.swift */,
 				9E5701322B54E3E000F61C29 /* TechnicalAttributeCell.swift */,
 				9E5701342B54E3ED00F61C29 /* MentalAttributeCell.swift */,
 				9E57014D2B55070400F61C29 /* SettingsCollectionViewCell.swift */,
@@ -461,6 +478,12 @@
 				9E5701A12B55364800F61C29 /* WhatsNewCollectionViewCell.swift */,
 				9E5701A92B55398600F61C29 /* PlayerSearchCollectionViewCell.swift */,
 				9E5701AD2B5539D300F61C29 /* EmptyStateCollectionViewCell.swift */,
+				9E60224D2B55F24000EB7DED /* GoalKeeperAttributeCell.swift */,
+				9E60224F2B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift */,
+				9E6022532B55F2B700EB7DED /* HiddenAttributeCell.swift */,
+				9E6022552B55F2D000EB7DED /* TwoHiddenAttributeCell.swift */,
+				9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */,
+				9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -582,6 +605,7 @@
 				9E5701B92B553B5700F61C29 /* Configurators.swift */,
 				9E5701CD2B553D4700F61C29 /* Position.swift */,
 				9E5701D52B553DD200F61C29 /* OctagonData.swift */,
+				9E6022512B55F27500EB7DED /* StatsCategory.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -816,6 +840,7 @@
 				9E5701222B54E36B00F61C29 /* PhysicalViewController.swift in Sources */,
 				9E5701522B55078000F61C29 /* UIView+Ext.swift in Sources */,
 				9E5701F32B55417000F61C29 /* CustomProgressBar.swift in Sources */,
+				9E6022542B55F2B700EB7DED /* HiddenAttributeCell.swift in Sources */,
 				9E5701242B54E37000F61C29 /* GoalKeeperViewController.swift in Sources */,
 				9E5701EB2B55406200F61C29 /* PhysicalViewModel.swift in Sources */,
 				9E57016A2B551F3800F61C29 /* PlayerData.swift in Sources */,
@@ -824,6 +849,7 @@
 				9E5701702B5520AC00F61C29 /* PhysicalAttribute.swift in Sources */,
 				9E5701622B551EC900F61C29 /* UserDefaultsKey.swift in Sources */,
 				9E5701172B54E32900F61C29 /* StatsSettingsViewController.swift in Sources */,
+				9E60224E2B55F24000EB7DED /* GoalKeeperAttributeCell.swift in Sources */,
 				9E5701AC2B5539AC00F61C29 /* UIStackView+Ext.swift in Sources */,
 				9E5701D02B553D6100F61C29 /* PitchView.swift in Sources */,
 				9E5701C42B553C7C00F61C29 /* PlayerViewController2.swift in Sources */,
@@ -859,6 +885,7 @@
 				9E5701A42B55385C00F61C29 /* PlayerSearchViewModel.swift in Sources */,
 				9E5701762B55224C00F61C29 /* StatsMode.swift in Sources */,
 				9E57018A2B5530B600F61C29 /* CloudStatusViewController.swift in Sources */,
+				9E60225A2B55F36500EB7DED /* PhysicalAttributeCell.swift in Sources */,
 				9E5701F52B55419400F61C29 /* LegendView.swift in Sources */,
 				9E5701062B54A3F800F61C29 /* ComparisonViewController.swift in Sources */,
 				9E5701CC2B553D3100F61C29 /* FootballPitchViewModel.swift in Sources */,
@@ -868,6 +895,7 @@
 				9E5701592B55082A00F61C29 /* FontAdjustable.swift in Sources */,
 				9E5701E32B553F7800F61C29 /* View+Ext.swift in Sources */,
 				9E5701D42B553DB800F61C29 /* OctagonViewModel.swift in Sources */,
+				9E6022582B55F30E00EB7DED /* TwoMentalAttributeCell.swift in Sources */,
 				9E57015B2B551D7600F61C29 /* StatsSettingsCoordinator.swift in Sources */,
 				9E608F522B5349F3007A1C5E /* SceneDelegate.swift in Sources */,
 				9E5701BE2B553BF700F61C29 /* OrderPickerView.swift in Sources */,
@@ -883,6 +911,7 @@
 				9E57011B2B54E33800F61C29 /* WhatsNewViewController.swift in Sources */,
 				9E5701B82B553B3700F61C29 /* CustomRangeSlider.swift in Sources */,
 				9E5701D62B553DD200F61C29 /* OctagonData.swift in Sources */,
+				9E6022502B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift in Sources */,
 				9E5701042B54A3F100F61C29 /* LastSearchedViewController.swift in Sources */,
 				9E5701862B5523C200F61C29 /* UIViewController+Ext.swift in Sources */,
 				9E5701AE2B5539D300F61C29 /* EmptyStateCollectionViewCell.swift in Sources */,
@@ -897,6 +926,7 @@
 				9E57017A2B55229500F61C29 /* Option2ColorTheme.swift in Sources */,
 				9E5701E72B55401200F61C29 /* ProfileViewModel.swift in Sources */,
 				9E57017C2B5522D200F61C29 /* TwoTechnicalCollectionViewCell.swift in Sources */,
+				9E60225C2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift in Sources */,
 				9E57015F2B551EA500F61C29 /* Option.swift in Sources */,
 				9E5701202B54E36400F61C29 /* BaseCollectionViewController.swift in Sources */,
 				9E57019A2B5532F800F61C29 /* NetworkService.swift in Sources */,
@@ -907,6 +937,7 @@
 				9E5701BC2B553BC900F61C29 /* MinMaxSliderView.swift in Sources */,
 				9E5701882B552FDA00F61C29 /* CloudStatusCoordinator.swift in Sources */,
 				9E5701312B54E3D100F61C29 /* ResultCell.swift in Sources */,
+				9E6022522B55F27500EB7DED /* StatsCategory.swift in Sources */,
 				9E5701902B55319400F61C29 /* CloudStatusViewModel.swift in Sources */,
 				9E5701EF2B5540C000F61C29 /* HiddenViewModel.swift in Sources */,
 				9E57017E2B55230800F61C29 /* ReusableCellConfiguring.swift in Sources */,
@@ -919,6 +950,7 @@
 				9E5701D82B553DE700F61C29 /* Octagon.swift in Sources */,
 				9E5701DA2B553E0300F61C29 /* RoundedCorners.swift in Sources */,
 				9E5701E12B553F5000F61C29 /* AttributeBoxModifier.swift in Sources */,
+				9E6022562B55F2D000EB7DED /* TwoHiddenAttributeCell.swift in Sources */,
 				9E5701842B55239E00F61C29 /* AttributeLabel.swift in Sources */,
 				9E5701802B55233D00F61C29 /* AttributeCell.swift in Sources */,
 				9E5701102B54A4E400F61C29 /* PlayerCoordinator.swift in Sources */,

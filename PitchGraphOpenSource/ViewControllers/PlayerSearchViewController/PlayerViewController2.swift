@@ -206,7 +206,35 @@ final class PlayerViewController2: CoreDataObservingViewController {
             viewModel: OctagonViewModel()
         )
         
-        let statsViewController = StatsViewController()
+        let statsViewController = StatsViewController(
+            userDefaults: userDefaultsManager,
+            selectedIndexSegment: 0,
+            statsMode: .appMode,
+            technicalViewModel: TechnicalViewModel(
+                userDefaults: userDefaultsManager,
+                player1: playerData
+            ),
+            mentalViewModel: MentalViewModel(
+                userDefaults: userDefaultsManager,
+                player1: playerData
+            ),
+            physicalViewModel: PhysicalViewModel(
+                userDefaults: userDefaultsManager,
+                player1: playerData
+            ),
+            goalKeeperViewModel: GoalKeeperViewModel(
+                userDefaults: userDefaultsManager,
+                player1: playerData
+            ),
+            hiddenViewModel: HiddenViewModel(
+                userDefaults: userDefaultsManager,
+                player1: playerData
+            ),
+            statsViewModel: StatsViewModel(
+                playerData: playerData,
+                appType: .appMode
+            )
+        )
         
         // Child view controllers to add
         let childViewControllers: [UIViewController] = [

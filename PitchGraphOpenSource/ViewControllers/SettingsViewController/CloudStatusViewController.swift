@@ -223,9 +223,21 @@ final class CloudStatusViewController: UIViewController {
             message = "An unknown error occurred. Please try again later.".localized
         }
         
-        let alert = UIAlertController(title: "Error".localized, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK".localized, style: .default))
-        present(alert, animated: true)
+        let alert = UIAlertController(
+            title: "Error".localized,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(
+            UIAlertAction(
+                title: "OK".localized,
+                style: .default
+            )
+        )
+        present(
+            alert,
+            animated: true
+        )
     }
     
     // MARK: - Dismiss Modal
@@ -285,14 +297,32 @@ extension CloudStatusViewController: UICollectionViewDataSource, UICollectionVie
 extension CloudStatusViewController: UICollectionViewDelegateFlowLayout {
     
     /// Returns the size for each item in the collection view.
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width - (Constants.padding * 2)
-        return CGSize(width: width, height: Constants.cellHeight)
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let width = collectionView.bounds.width - (
+            Constants.padding * 2
+        )
+        return CGSize(
+            width: width,
+            height: Constants.cellHeight
+        )
     }
     
     /// Returns the size for each header in the collection view.
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width = collectionView.bounds.width - (Constants.padding * 2)
-        return CGSize(width: width, height: Constants.headHeight)
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        referenceSizeForHeaderInSection section: Int
+    ) -> CGSize {
+        let width = collectionView.bounds.width - (
+            Constants.padding * 2
+        )
+        return CGSize(
+            width: width,
+            height: Constants.headHeight
+        )
     }
 }

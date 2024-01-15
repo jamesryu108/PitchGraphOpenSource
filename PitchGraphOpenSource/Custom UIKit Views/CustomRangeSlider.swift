@@ -156,22 +156,48 @@ final class CustomRangeSlider: UIView {
         let minPosition = minKnobXConstraint.constant
         let maxPosition = maxKnobXConstraint.constant
 
-        selectedTrackView.frame = CGRect(x: minPosition, y: 0, width: maxPosition - minPosition, height: Constants.trackHeight)
-        unselectedTrackView.frame = CGRect(x: 0, y: 0, width: minPosition, height: Constants.trackHeight)
+        selectedTrackView.frame = CGRect(
+            x: minPosition,
+            y: 0,
+            width: maxPosition - minPosition,
+            height: Constants.trackHeight
+        )
+        unselectedTrackView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: minPosition,
+            height: Constants.trackHeight
+        )
     }
 
     /// Handles pan gesture for the minimum value knob.
     @objc private func handleMinPan(_ gesture: UIPanGestureRecognizer) {
         // ... Existing pan handling logic
-        handlePan(gesture, isMinKnob: true)
-        delegate?.rangeSliderValueChanged(self, minVal: minValue, maxVal: maxValue, isMinKob: true)
+        handlePan(
+            gesture,
+            isMinKnob: true
+        )
+        delegate?.rangeSliderValueChanged(
+            self,
+            minVal: minValue,
+            maxVal: maxValue,
+            isMinKob: true
+        )
     }
     
     /// Handles pan gesture for the maximum value knob.
     @objc private func handleMaxPan(_ gesture: UIPanGestureRecognizer) {
         // ... Existing pan handling logic
-        handlePan(gesture, isMinKnob: false)
-        delegate?.rangeSliderValueChanged(self, minVal: minValue, maxVal: maxValue, isMinKob: false)
+        handlePan(
+            gesture,
+            isMinKnob: false
+        )
+        delegate?.rangeSliderValueChanged(
+            self,
+            minVal: minValue,
+            maxVal: maxValue,
+            isMinKob: false
+        )
     }
     
     /// Handles the pan gesture for both min and max knobs.

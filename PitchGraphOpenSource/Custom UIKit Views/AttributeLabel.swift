@@ -14,7 +14,9 @@ final class AttributeLabel: UILabel {
     }
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
-        return CGSize(width: size.width + contentInsets.left + contentInsets.right,
-                      height: size.height + contentInsets.top + contentInsets.bottom)
+        return CGSize(
+            width: size.width + contentInsets.left + contentInsets.right,
+            height: size.height + contentInsets.top + contentInsets.bottom
+        )
     }
 }

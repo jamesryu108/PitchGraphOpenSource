@@ -165,7 +165,7 @@ final class ParameterViewController: UIViewController {
         
         // Add subviews to content stack view
         
-        if !UIAccessibility.isVoiceOverRunning {
+        if UIAccessibility.isVoiceOverRunning {
             contentStackView.addArrangedSubview(ageStepperView)
             contentStackView.addArrangedSubview(abilityStepperView)
             contentStackView.addArrangedSubview(potentialStepperView)
@@ -203,7 +203,7 @@ final class ParameterViewController: UIViewController {
         var abilityRange: ClosedRange<Int>?
         var potentialRange: ClosedRange<Int>?
 
-        if !UIAccessibility.isVoiceOverRunning {
+        if UIAccessibility.isVoiceOverRunning {
             ageRange = extractRange(from: ageStepperView)
             abilityRange = extractRange(from: abilityStepperView)
             potentialRange = extractRange(from: potentialStepperView)

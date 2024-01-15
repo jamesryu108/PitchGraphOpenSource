@@ -1,0 +1,410 @@
+/* 
+  Localizable.strings
+  PitchGraphOpenSource
+
+  Created by James Ryu on 2024-01-15.
+  
+*/
+// MARK: - Cells
+
+// EmptyStateCollectionViewCell
+"Please search for players" = "플레이어들을 검색해 주세요";
+"This is an instruction for users to remind them to use the search bar to find players that they are looking for. Double-click on a search bar at the top to start searching." = "이것은 사용자들에게 찾고 있는 선수를 찾기 위해 검색 창을 사용하도록 상기시키는 지침입니다. 검색을 시작하려면 상단의 검색 창을 더블 클릭하세요.";
+// ResultCell
+
+"Unattached" = "무소속";
+"A national flag of a player" = "해당 선수의 나라의 국기 입니다";
+"A name of a player" = "선수 이름";
+"An abbreviation of player's country and name of the player's club" = "선수 국가 이름의 약자 및 소속팀 이름 입니다";
+
+// MARK: - ViewModels
+// CloudStatusViewModel
+"Availability" = "가용성";
+"Network" = "네트워크";
+"Checking..." = "확인 중...";
+"Connected to the internet" = "인터넷에 연결 됨";
+"iCloud Account" = "iCloud 계정";
+"Invalid URL for network check" = "네트워크 확인을 위한 잘못된 URL";
+"Internet connection might be limited" = "인터넷 연결이 제한될 수 있음";
+"Not connected to the internet" = "인터넷에 연결되지 않음";
+"Network request timed out" = "네트워크 요청 시간 초과";
+"Cannot connect to server" = "서버에 연결할 수 없음";
+"Network error:" = "네트워크 오류:";
+"Signed into an iCloud account" = "iCloud 계정에 로그인됨";
+"Not signed into an iCloud account" = "iCloud 계정에 로그인되지 않음";
+"Your iCloud account is restricted" = "iCloud 계정이 제한됨";
+"Your iCloud account status could not be determined" = "iCloud 계정 상태를 확인할 수 없음";
+"Your iCloud account is temporarily unavailable" = "iCloud 계정이 일시적으로 사용 불가능함";
+"Unknown iCloud account status." = "알 수 없는 iCloud 계정 상태.";
+"Error checking iCloud account:" = "iCloud 계정 확인 오류:";
+
+// CompareComparisonViewModel
+
+"Name" = "이름";
+"Nationality" = "국적";
+"Current Ability" = "현재 능력치";
+"Potential Ability" = "잠재 능력치";
+"Primary Position" = "주 포지션";
+"Asking Price" = "요구 이적료";
+"Contracted Until" = "계약 기간 만료일";
+"Reputation" = "명성치";
+"Club" = "현 소속팀";
+"Personality" = "성격";
+
+
+// OctagonViewModel
+
+"Physical" = "신체 능력치";
+"Attacking" = "공격력";
+"Aerial" = "공중볼 경합능력";
+"Technical" = "기술력";
+"Mental" = "정신력";
+"Speed" = "속력";
+"Vision" = "시야";
+"Defending" = "수비력";
+// OnboardingViewModel
+
+"Welcome to PitchGraph" = "PitchGraph에 오신 것을 환영합니다";
+"The comprehensive FM24 player stats in your pocket." = "주머니 속의 종합적인 FM24 플레이어 통계.";
+"Comprehensive Player Statistics" = "종합적인 플레이어 통계";
+"The player profile. The octagon. The bar. The numbers. The position chart. I got you completely covered." = "플레이어 프로필, 옥타곤, 바, 숫자, 포지션 차트. 모든 것을 완벽하게 제공합니다.";
+"The List of Your Favourite Players" = "선호하는 플레이어 목록 만들기 기능";
+"Favourite your players and keep a list of them, so that you can go back to them later." = "선호하는 플레이어를 목록에 추가하여 나중에 다시 볼 수 있습니다.";
+"Compare Between Two Players" = "두 플레이어 비교하기";
+"Very detailed comparison of any two players you are curious about" = "궁금한 두 플레이어에 대한 매우 상세한 비교";
+"Save and Back Up Your Players" = "플레이어 프로필 저장 및 백업";
+"And you can sync your records across all of your devices under the same Apple ID using iCloud!" = "iCloud를 사용하여 동일한 Apple ID의 모든 기기에서 기록된 데이타를 동기화할 수 있습니다!";
+"Save it in Documents!" = "문서에 저장!";
+"Save the stats to PDF and download it!" = "통계를 PDF로 저장하고 다운로드하십시오!";
+"Wonderkids!" = "신동들!";
+"Get a list of wonderkids!" = "모든 신동 목록을 얻으십시오!";
+
+
+// ProfileViewModel
+
+"Regional" = "지역적";
+"National" = "국가적";
+"Continental" = "대륙적";
+"Worldwide" = "전 세계적";
+"Unknown" = "알 수 없음";
+"Age" = "나이";
+"years-old" = "살";
+"Asking" = "필요한 대가";
+"Transfer fee" = "이적료";
+"Club" = "클럽";
+"His day job" = "그의 일상 직업";
+"Personality" = "성격";
+"Is he nice or not?" = "그가 친절한가요, 아닌가요?";
+"Reputation" = "명성치";
+"Do you know him?" = "당신은 그를 잘 알고 있나요?";
+"Ends" = "끝나는 날";
+"Last day" = "계약 종료일";
+"Okay" = "확인";
+
+//
+
+"Theme" = "테마";
+"iCloud Stuff" = "iCloud 섹션";
+"Help me" = "도와주세요";
+"About" = "정보";
+"Stats" = "통계";
+"iCloud Status" = "iCloud 상태";
+"Leave a Review" = "리뷰 남기기";
+"Terms of Service" = "서비스 약관";
+"Privacy Policy" = "개인정보 처리방침";
+"What's new in" = "업데이트 뉴스";
+"Well, it's v1.0, so everything is brand new" = "v1.0이므로 모든 것이 다 새로운 기능입니다.";
+
+// WhatsNewViewModel
+
+"Well, it's v1.0, so everything is brand new" = "v1.0이므로 모든 것이 다 새로운 기능입니다.";
+
+// MARK: - Coordinators
+
+// MainCoordinator
+"Player" = "플레이어";
+"Comparison" = "비교하기";
+"Favourite" = "즐겨찾기";
+
+// Random Views
+// FootballPitchView
+"Eligible Positions" = "적격 포지션들";
+"Shows player's eligible positions" = "선수의 적합한 포지션을 보여줍니다.";
+// Legend View
+"Current ability:" = "현재 능력치:";
+"Potential ability:" = "잠재 능력치:";
+
+// Playerview
+"Click to pick a player" = "플레이어를 선택하려면 클릭하세요";
+
+// Validation
+"Please enter a valid number between" = "Please enter a valid number between";
+"and" = "and";
+"Minimum value cannot be greater than the current maximum value" = "최소값은 현재 최대값보다 클 수 없습니다";
+"Maximum value cannot be less than the current minimum value" = "최대값은 현재 최소값보다 작을 수 없습니다";
+"Invalid Input" = "잘못된 입력";
+"OK" = "확인";
+
+// MARK: - ViewControllers
+
+// LastSearchedViewController
+
+"Last Searched" = "검색 기록";
+
+// PlayerSearchViewController
+
+"Player Search" = "선수 찾기";
+"Click on here to filter your search based on parameters such as age, current ability, potential ability." = "나이, 현재 능력, 잠재 능력과 같은 매개변수를 기반으로 검색을 필터링하려면 여기를 클릭하세요";
+"Click here to change system settings." = "시스템 설정을 변경하려면 여기를 클릭하세요.";
+// SettingsViewController
+"Settings" = "설정";
+"Minimum value" = "최소 값";
+"Maximum value" = "최대 값";
+
+// StatsSettingsViewController
+"Stat Theme Settings" = "통계 테마 설정";
+
+// CloudStatusViewController
+"Checking network connection" = "네트워크 연결 확인 중";
+"iCloud Status" = "iCloud 상태";
+"The network is currently unavailable. Please check your connection and try again." = "현재 네트워크를 사용할 수 없습니다. 연결을 확인하고 다시 시도하세요.";
+"Unable to access iCloud Account. Please check your iCloud settings and try again." = "iCloud 계정에 접근할 수 없습니다. iCloud 설정을 확인하고 다시 시도하세요.";
+"Network access is restricted. Please check your network settings." = "네트워크 접근이 제한되었습니다. 네트워크 설정을 확인하세요.";
+"An unknown error occurred. Please try again later." = "알 수 없는 오류가 발생했습니다. 나중에 다시 시도하세요.";
+"Error" = "오류";
+
+// WhatsNewViewController
+"What's New in" = "새로운 기능";
+
+// StatsViewController
+"Stats" = "통계";
+"Goalkeeping" = "골키퍼";
+"Technical" = "기술력";
+"Mental" = "정신력";
+"Physical" = "신체능력";
+
+// ProfileViewController
+"Current/Potential Ability" = "현재/잠재 능력치";
+"Profile image of the player" = "선수의 프로필 이미지";
+"Nationality of the player" = "선수의 국적";
+"Indicator of the player's current and potential ability" = "선수의 현재 및 잠재 능력 지시기";
+"Visual representation of the player's progress" = "선수의 진행 상황의 시각적 표현";
+
+// ComparisonViewController
+"Compare" = "두 선수들 비교하기";
+
+// SearchTwoPlayersViewController
+"Proceed" = "진행하기";
+"Search Items" = "검색 항목";
+"Compare" = "비교";
+
+"Proceeds to compare the selected players. If the button looks faded, make sure two players are selected" = "선택된 선수들을 비교합니다. 만약 흐리게 표시 됐다면 두 선수들이 다 선택됐는지 확인하세요";
+"Displays information for the first player" = "첫 번째 선수의 정보를 표시합니다";
+"Displays information for the second player" = "두 번째 선수의 정보를 표시합니다";
+
+// OctagonView
+"Attribute Analysis" = "속성 분석";
+"Clear" = "지우기";
+"Provides an analysis of player attributes using an octagon" = "선수의 능력을 팔각형 차트를 이용해 구현합니다";
+"Displays the first player's score" = "첫 번째 선수의 점수를 표시합니다";
+"Displays the name of the attribute" = "속성의 이름을 표시합니다";
+"Displays the second player's score" = "두 번째 선수의 점수를 표시합니다";
+
+// ParameterViewController
+"Age" = "나이";
+"Current Ability" = "현재 능력치";
+"Potential Ability" = "잠재 능력치";
+"Sort By" = "정렬 기준";
+"Invalid input" = "잘못된 입력";
+"Try again" = "다시 시도하기";
+"age (ascending)" = "나이 (오름차순)";
+"current ability (ascending)" = "현재 능력 (오름차순)";
+"potential ability (ascending)" = "잠재 능력 (오름차순)";
+"age (descending)" = "나이 (내림차순)";
+"current ability (descending)" = "현재 능력 (내림차순)";
+"potential ability (descending)" = "잠재 능력 (내림차순)";
+"Set Parameter" = "매개변수 설정";
+
+// PlayerViewController2
+"No name" = "이름 없음";
+"Indicates that player data is currently loading." = "선수 데이터가 현재 로딩 중임을 나타냅니다.";
+"Scrolls to view the player's detailed information." = "선수의 상세 정보를 보기 위해 스크롤합니다.";
+"Taps to mark this player as your favorite." = "이 선수를 즐겨찾기로 표시하려면 탭하세요.";
+"Taps to share player data." = "선수 데이터를 공유하려면 탭하세요.";
+
+// Technical Attributes
+"Crossing" = "크로싱";
+"Corners" = "코너킥";
+"First Touch" = "퍼스트터치";
+"Finishing" = "골 결정력";
+"Dribbling" = "드리블";
+"Heading" = "헤딩";
+"Freekicks" = "프리킥";
+"Marking" = "대인마크";
+"Long Throw" = "장거리 스로인";
+"Longshots" = "중거리슛";
+"Passing" = "패스";
+"Penalties" = "페널티킥";
+"Tackling" = "태클";
+"Technique" = "개인기";
+"The score is out of 20" = "점수는 20점 만점입니다.";
+
+// Physical Attributes
+"Acceleration" = "순간속도";
+"Agility" = "민첩성";
+"Balance" = "균형감각";
+"Jumping Reach" = "점프력";
+"Natural Fitness" = "타고난 체력";
+"Pace" = "주력";
+"Strength" = "힘";
+"Stamina" = "지구력";
+
+// Mental Attributes
+"Anticipation" = "예측력";
+"Aggression" = "적극성";
+"Bravery" = "대담성";
+"Composure" = "침착성";
+"Concentration" = "집중력";
+"Decisions" = "판단력";
+"Determination" = "결단력";
+"Flair" = "재주";
+"Leadership" = "리더십";
+"Off The Ball" = "볼 없을 때 움직임";
+"Positioning" = "위치선정력";
+"Workrate" = "활동량";
+"Vision" = "시야";
+"Teamwork" = "팀워크";
+
+// GoalKeeper Attributes
+"Aerial Reach" = "공중 도달 범위";
+"Communication" = "커뮤니케이션";
+"Command Of Area" = "지역 통제력";
+"Eccentricity" = "기인";
+"Handling" = "헨들링";
+"Kicking" = "킥력";
+"One Vs One" = "일대일";
+"Punching" = "펀칭";
+"Reflexes" = "반사 신경";
+"Rushing Out" = "돌진력";
+"Throwing" = "스로잉";
+
+// AttributeCell
+
+"This is an attribute title" = "이것은 속성 제목입니다";
+"This is an attribute label" = "이것은 속성 라벨입니다";
+"This is an unit label" = "이것은 단위 라벨입니다";
+
+// ComparisonCell
+
+"Stat of a first player" = "첫 번째 선수의 통계";
+"Stat of a second player" = "두 번째 선수의 통계";
+
+// TwoTechnicalCollectionViewCell
+
+"Displays the first player's technical score" = "첫 번째 선수의 정신 점수를 표시합니다";
+"Displays the name of the technical attribute" = "정신 속성의 이름을 표시합니다";
+"Displays the second player's technical score" = "두 번째 선수의 정신 점수를 표시합니다";
+
+// TwoMentalAttributeCell
+
+"Displays the first player's mental score" = "첫 번째 선수의 정신 점수를 표시합니다";
+"Displays the name of the mental attribute" = "정신 속성의 이름을 표시합니다";
+"Displays the second player's mental score" = "두 번째 선수의 정신 점수를 표시합니다";
+
+// TwoGoalKeeperAttributeCell
+
+"Displays the first goalkeeper's score" = "첫 번째 골키퍼의 점수를 표시합니다";
+"Displays the name of the goalkeeper attribute" = "골키퍼 속성의 이름을 표시합니다";
+"Displays the second goalkeeper's score" = "두 번째 골키퍼의 점수를 표시합니다";
+
+
+// TwoPhysicalAttributeCell
+"Displays the first player's physical score" = "첫 번째 선수의 신체 점수를 표시합니다";
+"Displays the name of the physical attribute" = "신체 속성의 이름을 표시합니다";
+"Displays the second player's physical score" = "두 번째 선수의 신체 점수를 표시합니다";
+
+// FavouriteCollectionViewCell
+
+"Displays the national flag of the player" = "선수의 국기를 표시합니다";
+"Displays the name of the player" = "선수의 이름을 표시합니다";
+"Displays the nationality of the player" = "선수의 국적을 표시합니다";
+
+// EmptyFavouriteCollectionViewCell
+
+"Message prompting to favorite players" = "선수들을 즐겨찾기에 추가하라는 메시지";
+
+// EmptyLastSearchedCollectionViewCell
+
+"Message prompting to search for players" = "선수 검색을 유도하는 메시지";
+
+// SettingsCollectionViewCell
+
+"Icon representing the setting" = "설정을 나타내는 아이콘";
+"Title of the setting" = "설정의 제목";
+"Indicates more options available" = "더 많은 옵션을 나타냅니다";
+
+// SettingsSetionHeaderView
+
+"Title of the settings section" = "설정 섹션의 제목";
+
+// WhatsNewCollectionViewCell
+
+"Details about the latest update" = "최신 업데이트에 대한 세부 정보";
+
+// CloudStatusHeaderView
+
+"Displays the title of the cloud status section" = "클라우드 상태 섹션의 제목을 표시합니다";
+
+// CloudStatusCell
+
+"Title of the cloud status" = "클라우드 상태의 제목";
+"Description of the cloud status" = "클라우드 상태의 설명";
+"Icon representing the cloud status" = "클라우드 상태를 나타내는 아이콘";
+
+// StatsSettingCollectionViewCell
+
+"Icon representing the setting option" = "설정 옵션을 나타내는 아이콘";
+"Title of the setting option" = "설정 옵션의 제목";
+"Indicator for selected setting" = "선택된 설정을 나타내는 지시기";
+
+// HiddenAttributeCell
+
+"Name of the hidden attribute" = "숨겨진 속성의 이름";
+"Score of the hidden attribute" = "숨겨진 속성의 점수";
+
+// TwoHiddenAttributeCell
+
+"Score of player 1" = "1번 선수의 점수";
+"Name of the hidden attribute" = "숨겨진 속성의 이름";
+"Score of player 2" = "2번 선수의 점수";
+
+// WonderKidsCollectionViewCell
+
+"National flag of the player" = "선수의 국기";
+"Name and age of the player" = "선수의 이름과 나이";
+"Nationality and potential ability of the player" = "선수의 국적과 잠재적 능력";
+"Age:" = "나이:";
+"yrs" = "살";
+
+// LastSearchedCollectionViewCell
+
+"Flag representing the player's nationality" = "선수의 국적을 나타내는 국기";
+"Name of the player" = "선수의 이름";
+"Nationality of the player" = "선수의 국적";
+
+// HiddenViewController
+
+"Adaptability" = "적응력";
+"Controversy" = "논란";
+"Consistency" = "일관된 성능";
+"Ambition" = "야심";
+"Versatility" = "다양한 포지션 능력";
+"Temperament" = "성품";
+"Sportsmanship" = "스포츠맨십";
+"Professionalism" = "프로 정신";
+"Pressure" = "압박감";
+"Loyalty" = "충성도";
+"Injury Proneness" = "부상 경향";
+"Important Matches" = "중요 경기";
+"Dirtiness" = "거친 플레이";
+"Hidden" = "숨겨진 능력";

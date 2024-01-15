@@ -10,11 +10,14 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if !UserDefaultsManager.shared.hasAppLaunchedBefore() {
+            // Register default values only on first launch
+            UserDefaultsManager.shared.registerDefaultSearchParameters()
+            // Mark the app as launched
+            UserDefaultsManager.shared.markAppAsLaunched()
+        }
         return true
     }
 

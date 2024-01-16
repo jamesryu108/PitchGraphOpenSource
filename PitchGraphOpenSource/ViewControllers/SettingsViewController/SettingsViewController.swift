@@ -131,7 +131,7 @@ final class SettingsViewController: UIViewController {
         coordinator?.dismissModal(animated: true)
     }
     
-    func cleanUp() {
+    private func cleanUp() {
         coordinator?.coordinatorDidFinish()
     }
 }

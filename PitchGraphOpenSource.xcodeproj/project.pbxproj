@@ -150,6 +150,9 @@
 		9E608F752B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F742B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift */; };
 		9E608F772B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F762B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift */; };
 		9EC67A552B563527005C4E1D /* SearchTwoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC67A542B563527005C4E1D /* SearchTwoCoordinator.swift */; };
+		9EC67A572B56566E005C4E1D /* LastSearchedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC67A562B56566E005C4E1D /* LastSearchedCollectionViewCell.swift */; };
+		9EC67A592B5657C0005C4E1D /* LastSearchedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC67A582B5657C0005C4E1D /* LastSearchedViewModel.swift */; };
+		9EC67A5B2B5657EF005C4E1D /* EmptyLastSearchedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC67A5A2B5657EF005C4E1D /* EmptyLastSearchedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,6 +323,9 @@
 		9E608F742B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchGraphOpenSourceUITests.swift; sourceTree = "<group>"; };
 		9E608F762B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchGraphOpenSourceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9EC67A542B563527005C4E1D /* SearchTwoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTwoCoordinator.swift; sourceTree = "<group>"; };
+		9EC67A562B56566E005C4E1D /* LastSearchedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchedCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EC67A582B5657C0005C4E1D /* LastSearchedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSearchedViewModel.swift; sourceTree = "<group>"; };
+		9EC67A5A2B5657EF005C4E1D /* EmptyLastSearchedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLastSearchedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +515,8 @@
 				9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */,
 				9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */,
 				9E6022842B56309500EB7DED /* ComparisonCell.swift */,
+				9EC67A562B56566E005C4E1D /* LastSearchedCollectionViewCell.swift */,
+				9EC67A5A2B5657EF005C4E1D /* EmptyLastSearchedCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -569,6 +577,7 @@
 				9E5701F02B5540EF00F61C29 /* StatsViewModel.swift */,
 				9E60227C2B562E2200EB7DED /* ComparisonViewModel.swift */,
 				9E6022802B56305800EB7DED /* CompareComparisonViewModel.swift */,
+				9EC67A582B5657C0005C4E1D /* LastSearchedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -908,6 +917,7 @@
 				9E5701F12B5540EF00F61C29 /* StatsViewModel.swift in Sources */,
 				9E5701262B54E37500F61C29 /* TechnicalViewController.swift in Sources */,
 				9E5701962B55322D00F61C29 /* NetworkServiceProtocol.swift in Sources */,
+				9EC67A572B56566E005C4E1D /* LastSearchedCollectionViewCell.swift in Sources */,
 				9E5701BA2B553B5700F61C29 /* Configurators.swift in Sources */,
 				9E5701982B55324F00F61C29 /* NetworkConstants.swift in Sources */,
 				9E5701152B54E31C00F61C29 /* SettingsViewController.swift in Sources */,
@@ -958,6 +968,7 @@
 				9E5701C22B553C4E00F61C29 /* PlayerViewModel.swift in Sources */,
 				9E57016C2B551F6100F61C29 /* GoalKeeperAttribute.swift in Sources */,
 				9E57014C2B55061700F61C29 /* VersionProvider.swift in Sources */,
+				9EC67A592B5657C0005C4E1D /* LastSearchedViewModel.swift in Sources */,
 				9E57018C2B55311300F61C29 /* CloudStatusCell.swift in Sources */,
 				9E5701E92B55403600F61C29 /* MentalViewModel.swift in Sources */,
 				9E57019C2B55356600F61C29 /* WhatsNewData.swift in Sources */,
@@ -970,6 +981,7 @@
 				9E5701202B54E36400F61C29 /* BaseCollectionViewController.swift in Sources */,
 				9E57019A2B5532F800F61C29 /* NetworkService.swift in Sources */,
 				9E57011E2B54E35C00F61C29 /* StatsViewController.swift in Sources */,
+				9EC67A5B2B5657EF005C4E1D /* EmptyLastSearchedCollectionViewCell.swift in Sources */,
 				9E5701C62B553C9700F61C29 /* CoreDataObservingViewController.swift in Sources */,
 				9E5701A22B55364800F61C29 /* WhatsNewCollectionViewCell.swift in Sources */,
 				9E5701662B551EFF00F61C29 /* SortOption.swift in Sources */,

@@ -72,13 +72,7 @@ final class PlayerViewController2: CoreDataObservingViewController {
     
     /// Images for the favorite star in empty state.
     private let starImageEmpty = UIImage(systemName: "star")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
-    
-    /// Images for the favorite star in filled state.
-    private let starImageFilled = UIImage(systemName: "star.fill")?.withTintColor(.systemYellow, renderingMode: .alwaysOriginal)
-    
-    /// Bar item for marking a player as favorite.
-    lazy private var favouritePlayerItem = UIBarButtonItem(image: starImageEmpty, style: .done, target: self, action: #selector(favoritePlayer))
-    
+        
     // MARK: - Data
     /// Flag to check if the view is already loaded to prevent redundant setup.
     private var isAlreadyLoaded = false
@@ -121,24 +115,19 @@ final class PlayerViewController2: CoreDataObservingViewController {
                 activityIndicator.stopAnimating()
                 activityIndicator.removeFromSuperview()
                 isAlreadyLoaded = true
-                //checkFavorite()
-                //saveInLastSavedList(playerInfo: viewModel.playerData)
+                saveInLastSavedList(playerInfo: viewModel.playerData)
             }
         }
     }
-    
+
     /// Handles updates from Core Data.
     override func handleCoreDataUpdate(notification: Notification.Name) {
         super.handleCoreDataUpdate(notification: notification)
     }
     
     // MARK: - Private Methods
-    
-    /// Checks and updates the favorite status of the player.
-    private func checkFavorite() {
-        favouritePlayerItem.image = viewModel.loadPlayerInfo() != nil ? starImageFilled : starImageEmpty
-    }
-    
+  
+
     /// Sets up the activity indicator in the center of the view.
     private func setupActivityIndicator() {
         activityIndicator.center = view.center
@@ -298,12 +287,6 @@ final class PlayerViewController2: CoreDataObservingViewController {
             target: self,
             action: #selector(dismissModal)
         )
-        self.navigationItem.rightBarButtonItems = [
-            favouritePlayerItem
-        ]
-        
-        favouritePlayerItem.isAccessibilityElement = true
-        favouritePlayerItem.accessibilityHint = "Taps to mark this player as your favorite.".localized
     }
     
     /// Dismisses the current modal view controller.
@@ -320,33 +303,6 @@ final class PlayerViewController2: CoreDataObservingViewController {
         self.view.backgroundColor = .systemGray6
         setupNavBar()
     }
-    
-    /// Toggles the favorite status of the player.
-    ///
-    /// This method is triggered by tapping a favourite button. It checks the current favorite status of the player. If the player was not favorited, it marks the player as a favorite in the core data manager and updates the favorite player item's image to `starImageFilled`. If the player esd already favorited, it removes the player from favorites and updates the favorite player item's image to `starImageEmpty`.
-    ///
-    /// - Note: This method uses optional chaining and guard statements for error handling. It ensures that the player data is valid before attempting to change the favorite status.
-    ///
-    /// - Precondition:
-    ///     - `playerData` must be non-nil and should contain a valid `playerId`.
-    ///     - `coreDataManager` must be correctly configured for saving and deleting player information.
-    @objc private func favoritePlayer() {
-        guard let playerData = viewModel.playerData, !viewModel.isPlayerFavorited(playerId: playerData.playerId ?? "")
-        else {
-            favouritePlayerItem.image = starImageEmpty
-            viewModel.deletePlayerInfo(playerId: viewModel.playerData?.playerId ?? "")
-            return
-        }
-        
-        let playerInfo = PlayerInfo(
-            playerId: playerData.playerId ?? "",
-            name: playerData.name ?? "",
-            nationality: playerData.nationalities?[0] ?? "",
-            club: playerData.club ?? ""
-        )
-        viewModel.savePlayerInfo(playerInfo)
-        favouritePlayerItem.image = starImageFilled
-    }
 
     private func saveInLastSavedList(playerInfo: PlayerData?) {
         let lastSavedPlayer = LastSearchedPlayerInfo(
@@ -356,6 +312,7 @@ final class PlayerViewController2: CoreDataObservingViewController {
             club: playerInfo?.club,
             lastSearched: Date.now
         )
+        
         viewModel.manageLastSearchedPlayersAndUpdate(newPlayerInfo: lastSavedPlayer, isPro: true)
     }
 }

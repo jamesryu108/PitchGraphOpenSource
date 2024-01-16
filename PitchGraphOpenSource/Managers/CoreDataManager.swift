@@ -82,7 +82,7 @@ final class CoreDataManager: CoreDataManaging {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentCloudKitContainer(name: "PitchGraph")
+        let container = NSPersistentCloudKitContainer(name: "PitchGraphOpenSource")
         
         // turn on persistent history tracking
         // https://developer.apple.com/documentation/coredata/consuming_relevant_store_changes
@@ -124,7 +124,9 @@ final class CoreDataManager: CoreDataManaging {
             entity.club = playerInfo.club
             // Additional logic for PlayerEntity
         } else if let lastSearchedInfo = playerInfo as? LastSearchedPlayerInfo {
+            
             let entity = LastSearchedEntity(context: context)
+            
             entity.playerId = lastSearchedInfo.playerId
             entity.name = lastSearchedInfo.name
             entity.nationality = lastSearchedInfo.nationality

@@ -10,7 +10,7 @@ The PitchGraph app (Open-sourced) has three sections:
 ## Screenshots
 
 ![Simulator Screenshot - iPhone 15 Pro Max - 2024-01-16 at 01 40 24](https://github.com/jamesryu108/PitchGraphOpenSource/assets/33236626/bd770a54-3ab8-4843-84bd-1f0591ba6ffb)
-
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-01-16 at 01 39 58](https://github.com/jamesryu108/PitchGraphOpenSource/assets/33236626/db72e2a2-b74b-458a-ab6f-81bd5db591f2)
 
 ## Technologies
 

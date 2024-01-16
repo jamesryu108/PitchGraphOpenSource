@@ -1,5 +1,5 @@
 //
-//  PlayerSearchCoordinator.swift
+//  SearchTwoCoordinator.swift
 //  PitchGraphOpenSource
 //
 //  Created by James Ryu on 2024-01-15.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class PlayerSearchCoordinator: ChildCoordinator {
-
+final class SearchTwoCoordinator: ChildCoordinator {
+    
     var viewControllerRef: UIViewController?
     
     var navigationController: UINavigationController
@@ -25,23 +25,21 @@ final class PlayerSearchCoordinator: ChildCoordinator {
     
     func start() {
         let userDefaultsManager = UserDefaultsManager.shared
-        let playerSearchViewModel = PlayerSearchViewModel()
-        let playerSearchViewController = PlayerSearchViewController(
+        let viewModel = ComparisonViewModel()
+        let searchTwoViewController = SearchTwoPlayersViewController(
             coordinator: self,
-            viewModel: playerSearchViewModel,
-            userDefaultsManager: userDefaultsManager
+            userDefaultsManager: userDefaultsManager,
+            viewModel: viewModel
         )
-        viewControllerRef = playerSearchViewController
         
-        playerSearchViewController.coordinator = self
-        playerSearchViewController.tabBarItem = UITabBarItem(
-            title: "Player",
+        searchTwoViewController.tabBarItem = UITabBarItem(
+            title: "Compare",
             image: UIImage(systemName: "person.fill"),
-            tag: 0
+            tag: 1
         )
         
         navigationController.pushViewController(
-            playerSearchViewController,
+            searchTwoViewController,
             animated: false
         )
     }
@@ -55,15 +53,5 @@ final class PlayerSearchCoordinator: ChildCoordinator {
     
     func dismissModal(animated: Bool) {
         navigationController.topViewController?.dismiss(animated: animated)
-    }
-}
-
-extension PlayerSearchCoordinator {
-    func navigateToSettings() {
-        parent?.settingsScreen(navigationController: navigationController)
-    }
-    
-    func navigateToPlayerVC() {
-        parent?.playerScreen(navigationController: navigationController)
     }
 }

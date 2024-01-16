@@ -68,5 +68,9 @@ extension MainCoordinator {
         addChild(playerCoordinator)
         playerCoordinator.start()
     }
+    
+    func searchTwoScreen(navigationController: UINavigationController) {
+        
+    }
 }
 

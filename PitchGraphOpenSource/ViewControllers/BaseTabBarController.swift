@@ -12,7 +12,7 @@ final class BaseTabBarController: UITabBarController {
     weak var coordinator: MainCoordinator?
     
     private let playerCoordinator = PlayerSearchCoordinator(navigationController: UINavigationController())
-    
+    private let searchTwoCoordinator = SearchTwoCoordinator(navigationController: UINavigationController())
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -36,13 +36,14 @@ final class BaseTabBarController: UITabBarController {
     
     private func setupPlayerCoordinator() {
         playerCoordinator.parent = coordinator
+        searchTwoCoordinator.parent = coordinator
         
         for item in [playerCoordinator] as [Any] {
             coordinator?.addChild(item as? Coordinator)
         }
         
         playerCoordinator.start()
-        
-        viewControllers = [playerCoordinator.navigationController]
+        searchTwoCoordinator.start()
+        viewControllers = [playerCoordinator.navigationController, searchTwoCoordinator.navigationController]
     }
 }

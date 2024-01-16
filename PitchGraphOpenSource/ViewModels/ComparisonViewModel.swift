@@ -13,12 +13,34 @@ public final class ComparisonViewModel {
     // MARK: - Published Properties
     @Published public private(set) var playerData: [PlayerData]? // Stores data for individual players.
 
+    var player1: PlayerData?
+    
+    /// Data for the second player.
+    var player2: PlayerData?
+    
+    let userDefaultsManager: UserDefaultsManaging
+    
     // MARK: - Initializers
     
     public init(
-        playerData: [PlayerData]? = nil
+        playerData: [PlayerData]? = nil,
+        userDefaultsManager: UserDefaultsManaging
     ) {
         self.playerData = playerData
+        self.userDefaultsManager = userDefaultsManager
+        
+        Task {
+            await getPlayers()
+        }
+    }
+    
+    func getPlayers() async {
+        Task {
+            self.player1 = try? await UserDefaultsManager.shared.load(for: UserDefaultsKey.playerData1, as: PlayerData.self)
+            
+            self.player2 = try? await UserDefaultsManager.shared.load(for: UserDefaultsKey.playerData2, as: PlayerData.self)
+            print("^^^^ player1: \(self.player1)")
+        }
     }
     
     // MARK: - Call for Player Method

@@ -69,8 +69,11 @@ extension MainCoordinator {
         playerCoordinator.start()
     }
     
-    func searchTwoScreen(navigationController: UINavigationController) {
-        
+    func compareScreen(navigationController: UINavigationController) {
+        let compareCoordinator = ComparisonCoordinator(navigationController: navigationController)
+        compareCoordinator.parent = self
+        addChild(compareCoordinator)
+        compareCoordinator.start()
     }
 }
 

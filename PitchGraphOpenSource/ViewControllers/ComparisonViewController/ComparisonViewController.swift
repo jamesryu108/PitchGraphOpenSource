@@ -26,8 +26,8 @@ final class ComparisonViewController: UIViewController {
     
     /// View controller for displaying comparison columns.
     private lazy var compareColumnViewController = CompareColumnViewController(
-        player1: player1,
-        player2: player2,
+        player1: viewModel.player1,
+        player2: viewModel.player2,
         height: Constants.compareHeight
     )
     
@@ -35,8 +35,8 @@ final class ComparisonViewController: UIViewController {
     private lazy var doubleOctagonViewController = UIHostingController(
         rootView: OctagonView(
             height: Constants.octagonHeight,
-            player1Data: player1,
-            player2Data: player2,
+            player1Data: viewModel.player1,
+            player2Data: viewModel.player2,
             viewModel: OctagonViewModel()
         )
     )
@@ -62,16 +62,10 @@ final class ComparisonViewController: UIViewController {
         private let contentView = UIView()
         
         /// ViewModel for handling comparison logic.
-        private let viewModel = ComparisonViewModel()
+        private var viewModel: ComparisonViewModel
         
         /// Coordinator for navigation logic.
         private var coordinator: ComparisonCoordinator?
-        
-        /// Data for the first player.
-        private var player1: PlayerData
-        
-        /// Data for the second player.
-        private var player2: PlayerData
         
         /// Manager for user preferences and settings.
         private let userDefaults: UserDefaultsManaging
@@ -80,13 +74,11 @@ final class ComparisonViewController: UIViewController {
     
     init(
         coordinator: ComparisonCoordinator,
-        player1: PlayerData,
-        player2: PlayerData,
-        userDefaults: UserDefaultsManaging
+        userDefaults: UserDefaultsManaging,
+        viewModel: ComparisonViewModel
     ) {
-        self.player1 = player1
-        self.player2 = player2
         self.userDefaults = userDefaults
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.coordinator = coordinator
     }
@@ -104,6 +96,11 @@ final class ComparisonViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        cleanUp()
     }
     
     deinit {
@@ -231,43 +228,43 @@ final class ComparisonViewController: UIViewController {
     ///
     /// - Returns: A fully configured instance of `StatsViewController`.
     private func statsViewControllerMaker() -> StatsViewController {
-        
+
         // Instantiate the ViewModel for technical stats with necessary dependencies
-        let technicalViewModel = TechnicalViewModel(
+        lazy var technicalViewModel = TechnicalViewModel(
             userDefaults: userDefaults,
-            player1: player1,
-            player2: player2
+            player1: viewModel.player1 ?? PlayerData.messiPlayerData,
+            player2: viewModel.player2
         )
         
         // Instantiate the ViewModel for mental stats with necessary dependencies
-        let mentalViewModel = MentalViewModel(
+        lazy var mentalViewModel = MentalViewModel(
             userDefaults: userDefaults,
-            player1: player1,
-            player2: player2
+            player1: viewModel.player1 ?? PlayerData.messiPlayerData,
+            player2: viewModel.player2
         )
         
         // Instantiate the ViewModel for physical stats with necessary dependencies
-        let physicalViewModel = PhysicalViewModel(
+        lazy var  physicalViewModel = PhysicalViewModel(
             userDefaults: userDefaults,
-            player1: player1,
-            player2: player2
+            player1: viewModel.player1 ?? PlayerData.messiPlayerData,
+            player2: viewModel.player2
         )
         
         // Instantiate the ViewModel for goalkeeping stats with necessary dependencies
-        let goalKeeperViewModel = GoalKeeperViewModel(
+        lazy var  goalKeeperViewModel = GoalKeeperViewModel(
             userDefaults: userDefaults,
-            player1: player1,
-            player2: player2
+            player1: viewModel.player1 ?? PlayerData.messiPlayerData,
+            player2: viewModel.player2
         )
         
         // Instantiate the ViewModel for hidden stats with necessary dependencies
-        let hiddenViewModel = HiddenViewModel(
+        lazy var hiddenViewModel = HiddenViewModel(
             userDefaults: userDefaults,
-            player1: player1,
-            player2: player2
+            player1: viewModel.player1 ?? PlayerData.messiPlayerData,
+            player2: viewModel.player2
         )
         
-        let statsViewModel = StatsViewModel(playerData: player1, playerData2: player2, appType: .compareMode)
+        lazy var statsViewModel = StatsViewModel(playerData: viewModel.player1 ?? PlayerData.messiPlayerData, playerData2: viewModel.player2, appType: .compareMode)
         
         // Instantiate and return StatsViewController with all necessary ViewModels and other dependencies
         return StatsViewController(
@@ -280,5 +277,9 @@ final class ComparisonViewController: UIViewController {
             goalKeeperViewModel: goalKeeperViewModel, hiddenViewModel: hiddenViewModel,
             statsViewModel: statsViewModel
         )
+    }
+    
+    func cleanUp() {
+        coordinator?.coordinatorDidFinish()
     }
 }

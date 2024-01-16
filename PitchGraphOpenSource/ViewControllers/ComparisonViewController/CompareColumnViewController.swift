@@ -23,8 +23,8 @@ final class CompareColumnViewController: UIViewController {
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, PlayerComparison>!
     private let viewModel = CompareComparisonViewModel()
-    private var player1: PlayerData
-    private var player2: PlayerData
+    private var player1: PlayerData?
+    private var player2: PlayerData?
     
     enum Section {
         case main
@@ -37,10 +37,11 @@ final class CompareColumnViewController: UIViewController {
     // MARK: - Initialization
 
     /// Initializes `CompareColumnViewController` with two players' data.
-    init(player1: PlayerData, player2: PlayerData, height: CGFloat) {
+    init(player1: PlayerData?, player2: PlayerData?, height: CGFloat) {
         self.player1 = player1
         self.player2 = player2
         self.height = height
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -100,9 +101,11 @@ final class CompareColumnViewController: UIViewController {
     /// Applies the initial data snapshots to the collection view.
     private func applyInitialSnapshots() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, PlayerComparison>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(viewModel.createData(player1: player1, player2: player2))
-        dataSource.apply(snapshot, animatingDifferences: true)
+        if let player1, let player2 {
+            snapshot.appendSections([.main])
+            snapshot.appendItems(viewModel.createData(player1: player1, player2: player2))
+            dataSource.apply(snapshot, animatingDifferences: true)
+        }
     }
 }
 
@@ -118,6 +121,9 @@ extension CompareColumnViewController: UICollectionViewDelegateFlowLayout {
     
     /// Specifies the size for each item in the collection view.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let player1, let player2 else {
+            return CGSize(width: 0, height: 0)
+        }
         let itemsCount = CGFloat(viewModel.createData(player1: player1, player2: player2).count)
         return CGSize(width: collectionView.frame.size.width - 16, height: collectionView.frame.size.height / itemsCount)
     }

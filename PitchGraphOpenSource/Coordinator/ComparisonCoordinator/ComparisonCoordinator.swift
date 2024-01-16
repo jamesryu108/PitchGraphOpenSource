@@ -20,7 +20,10 @@ final class ComparisonCoordinator: ChildCoordinator {
     }
     
     func start() {
-        
+        let userDefaultsManager = UserDefaultsManager.shared
+        let viewModel = ComparisonViewModel( userDefaultsManager: UserDefaultsManager.shared)
+        let comparisonVC = ComparisonViewController(coordinator: self, userDefaults: userDefaultsManager, viewModel: viewModel)
+        presentModal(UINavigationController(rootViewController: comparisonVC), animated: true)
     }
     
     func presentModal(_ viewController: UIViewController, animated: Bool) {
@@ -28,7 +31,6 @@ final class ComparisonCoordinator: ChildCoordinator {
     }
     
     func dismissModal(animated: Bool) {
-        
         self.navigationController.topViewController?.dismiss(animated: true)
     }
     

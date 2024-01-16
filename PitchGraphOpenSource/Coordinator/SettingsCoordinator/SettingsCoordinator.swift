@@ -33,7 +33,6 @@ final class SettingsCoordinator: ChildCoordinator {
     }
     
     func dismissModal(animated: Bool) {
-        
         self.navigationController.topViewController?.dismiss(animated: true)
     }
     

@@ -130,7 +130,11 @@ final class SearchTwoPlayersViewController: UIViewController {
         setupHandler()
         setupFontSizeAdjustmentObserver()
     }
-    
+ 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        cleanUp()
+    }
     // MARK: - Setup Methods
     /// Sets up handlers for player views.
     private func setupHandler() {
@@ -193,20 +197,7 @@ final class SearchTwoPlayersViewController: UIViewController {
     
     /// Action to go to the modal view.
     @objc func goToModal() {
-        guard let coordinator, let player1, let player2 else {
-            return
-        }
-        
-//        let comparisonVC = ComparisonViewController(
-//            coordinator: coordinator,
-//            player1: player1,
-//            player2: player2,
-//            userDefaults: userDefaultsManager
-//        )
-//        comparisonVC.isModalInPresentation = true
-//        coordinator.presentModal(comparisonVC,
-//            animated: true
-//        )
+        coordinator?.openCompareVC()
     }
     
     /// Sets up the stack view.
@@ -298,7 +289,9 @@ extension SearchTwoPlayersViewController: UISearchResultsUpdating {
             do {
                 let player1Data = try await UserDefaultsManager.shared.load(for: UserDefaultsKey.playerData1, as: PlayerData.self)
                 player1 = player1Data
+                viewModel.player1 = player1Data
                 firstPlayerView.configureWith(player: player1)
+                
             } catch {
                 // Show an error only if player 2 is not selected.
                 guard self.player2 != nil else {
@@ -314,6 +307,7 @@ extension SearchTwoPlayersViewController: UISearchResultsUpdating {
             do {
                 let player2Data = try await UserDefaultsManager.shared.load(for: UserDefaultsKey.playerData2, as: PlayerData.self)
                 player2 = player2Data
+                viewModel.player2 = player2Data
                 secondPlayerView.configureWith(player: player2)
                 changeProceedButton()
             } catch {
@@ -339,11 +333,7 @@ extension SearchTwoPlayersViewController: UISearchResultsUpdating {
         // Update the `results` property with the fetched data.
         Task {
             
-            #if DEBUG
-            await viewModel.callForPlayer(name: query, isDebug: true)
-            #else
             await viewModel.callForPlayer(name: query, isDebug: false)
-            #endif
             if let searchResults = viewModel.playerData {
                 (searchController.searchResultsController as? ResultsViewController)?.results = searchResults
                 (searchController.searchResultsController as? ResultsViewController)?.cellSelectionHandler = { [weak self] in
@@ -353,6 +343,10 @@ extension SearchTwoPlayersViewController: UISearchResultsUpdating {
                 }
             }
         }
+    }
+    
+    func cleanUp() {
+        coordinator?.coordinatorDidFinish()
     }
 }
 

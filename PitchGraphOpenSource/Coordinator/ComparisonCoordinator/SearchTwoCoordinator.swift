@@ -25,23 +25,24 @@ final class SearchTwoCoordinator: ChildCoordinator {
     
     func start() {
         let userDefaultsManager = UserDefaultsManager.shared
-        let viewModel = ComparisonViewModel()
-        let searchTwoViewController = SearchTwoPlayersViewController(
-            coordinator: self,
-            userDefaultsManager: userDefaultsManager,
-            viewModel: viewModel
-        )
         
-        searchTwoViewController.tabBarItem = UITabBarItem(
-            title: "Compare",
-            image: UIImage(systemName: "person.fill"),
-            tag: 1
-        )
-        
-        navigationController.pushViewController(
-            searchTwoViewController,
-            animated: false
-        )
+            let viewModel = ComparisonViewModel(userDefaultsManager: userDefaultsManager)
+            let searchTwoViewController = SearchTwoPlayersViewController(
+                coordinator: self,
+                userDefaultsManager: userDefaultsManager,
+                viewModel: viewModel
+            )
+            
+            searchTwoViewController.tabBarItem = UITabBarItem(
+                title: "Compare",
+                image: UIImage(systemName: "person.fill"),
+                tag: 1
+            )
+            
+            navigationController.pushViewController(
+                searchTwoViewController,
+                animated: false
+            )
     }
     
     func presentModal(_ viewController: UIViewController, animated: Bool) {
@@ -53,5 +54,11 @@ final class SearchTwoCoordinator: ChildCoordinator {
     
     func dismissModal(animated: Bool) {
         navigationController.topViewController?.dismiss(animated: animated)
+    }
+}
+
+extension SearchTwoCoordinator {
+    func openCompareVC() {
+        parent?.compareScreen(navigationController: navigationController)
     }
 }

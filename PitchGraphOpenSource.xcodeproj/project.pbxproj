@@ -132,6 +132,14 @@
 		9E60225A2B55F36500EB7DED /* PhysicalAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */; };
 		9E60225C2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */; };
 		9E6022732B56147B00EB7DED /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9E6022722B56147B00EB7DED /* .gitignore */; };
+		9E6022752B562BF800EB7DED /* SearchTwoPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022742B562BF800EB7DED /* SearchTwoPlayersViewController.swift */; };
+		9E6022792B562D9B00EB7DED /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022782B562D9B00EB7DED /* PlayerView.swift */; };
+		9E60227B2B562DD700EB7DED /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60227A2B562DD700EB7DED /* ResultsViewController.swift */; };
+		9E60227D2B562E2200EB7DED /* ComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60227C2B562E2200EB7DED /* ComparisonViewModel.swift */; };
+		9E60227F2B56303D00EB7DED /* CompareColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60227E2B56303D00EB7DED /* CompareColumnViewController.swift */; };
+		9E6022812B56305800EB7DED /* CompareComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022802B56305800EB7DED /* CompareComparisonViewModel.swift */; };
+		9E6022832B56307200EB7DED /* PlayerComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022822B56307200EB7DED /* PlayerComparison.swift */; };
+		9E6022852B56309500EB7DED /* ComparisonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6022842B56309500EB7DED /* ComparisonCell.swift */; };
 		9E608F502B5349F3007A1C5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F4F2B5349F3007A1C5E /* AppDelegate.swift */; };
 		9E608F522B5349F3007A1C5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F512B5349F3007A1C5E /* SceneDelegate.swift */; };
 		9E608F572B5349F3007A1C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E608F552B5349F3007A1C5E /* Main.storyboard */; };
@@ -141,6 +149,7 @@
 		9E608F6B2B5349F5007A1C5E /* PitchGraphOpenSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F6A2B5349F5007A1C5E /* PitchGraphOpenSourceTests.swift */; };
 		9E608F752B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F742B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift */; };
 		9E608F772B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E608F762B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift */; };
+		9EC67A552B563527005C4E1D /* SearchTwoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC67A542B563527005C4E1D /* SearchTwoCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +297,14 @@
 		9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalAttributeCell.swift; sourceTree = "<group>"; };
 		9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPhysicalAttributeCell.swift; sourceTree = "<group>"; };
 		9E6022722B56147B00EB7DED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9E6022742B562BF800EB7DED /* SearchTwoPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTwoPlayersViewController.swift; sourceTree = "<group>"; };
+		9E6022782B562D9B00EB7DED /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		9E60227A2B562DD700EB7DED /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9E60227C2B562E2200EB7DED /* ComparisonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonViewModel.swift; sourceTree = "<group>"; };
+		9E60227E2B56303D00EB7DED /* CompareColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareColumnViewController.swift; sourceTree = "<group>"; };
+		9E6022802B56305800EB7DED /* CompareComparisonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareComparisonViewModel.swift; sourceTree = "<group>"; };
+		9E6022822B56307200EB7DED /* PlayerComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerComparison.swift; sourceTree = "<group>"; };
+		9E6022842B56309500EB7DED /* ComparisonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparisonCell.swift; sourceTree = "<group>"; };
 		9E608F4C2B5349F3007A1C5E /* PitchGraphOpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchGraphOpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E608F4F2B5349F3007A1C5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E608F512B5349F3007A1C5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,6 +319,7 @@
 		9E608F702B5349F5007A1C5E /* PitchGraphOpenSourceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchGraphOpenSourceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E608F742B5349F5007A1C5E /* PitchGraphOpenSourceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchGraphOpenSourceUITests.swift; sourceTree = "<group>"; };
 		9E608F762B5349F5007A1C5E /* PitchGraphOpenSourceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchGraphOpenSourceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9EC67A542B563527005C4E1D /* SearchTwoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTwoCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +399,9 @@
 			isa = PBXGroup;
 			children = (
 				9E5701052B54A3F800F61C29 /* ComparisonViewController.swift */,
+				9E6022742B562BF800EB7DED /* SearchTwoPlayersViewController.swift */,
+				9E60227A2B562DD700EB7DED /* ResultsViewController.swift */,
+				9E60227E2B56303D00EB7DED /* CompareColumnViewController.swift */,
 			);
 			path = ComparisonViewController;
 			sourceTree = "<group>";
@@ -397,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				9E5701112B54A4EC00F61C29 /* ComparisonCoordinator.swift */,
+				9EC67A542B563527005C4E1D /* SearchTwoCoordinator.swift */,
 			);
 			path = ComparisonCoordinator;
 			sourceTree = "<group>";
@@ -486,6 +508,7 @@
 				9E6022552B55F2D000EB7DED /* TwoHiddenAttributeCell.swift */,
 				9E6022592B55F36500EB7DED /* PhysicalAttributeCell.swift */,
 				9E60225B2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift */,
+				9E6022842B56309500EB7DED /* ComparisonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -544,6 +567,8 @@
 				9E5701EC2B55409100F61C29 /* GoalKeeperViewModel.swift */,
 				9E5701EE2B5540C000F61C29 /* HiddenViewModel.swift */,
 				9E5701F02B5540EF00F61C29 /* StatsViewModel.swift */,
+				9E60227C2B562E2200EB7DED /* ComparisonViewModel.swift */,
+				9E6022802B56305800EB7DED /* CompareComparisonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -608,6 +633,8 @@
 				9E5701CD2B553D4700F61C29 /* Position.swift */,
 				9E5701D52B553DD200F61C29 /* OctagonData.swift */,
 				9E6022512B55F27500EB7DED /* StatsCategory.swift */,
+				9E6022782B562D9B00EB7DED /* PlayerView.swift */,
+				9E6022822B56307200EB7DED /* PlayerComparison.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -855,6 +882,7 @@
 				9E5701172B54E32900F61C29 /* StatsSettingsViewController.swift in Sources */,
 				9E60224E2B55F24000EB7DED /* GoalKeeperAttributeCell.swift in Sources */,
 				9E5701AC2B5539AC00F61C29 /* UIStackView+Ext.swift in Sources */,
+				9E60227B2B562DD700EB7DED /* ResultsViewController.swift in Sources */,
 				9E5701D02B553D6100F61C29 /* PitchView.swift in Sources */,
 				9E5701C42B553C7C00F61C29 /* PlayerViewController2.swift in Sources */,
 				9E5701E52B553FC500F61C29 /* TechnicalViewModel.swift in Sources */,
@@ -867,6 +895,7 @@
 				9E57012D2B54E39700F61C29 /* ProfileViewController.swift in Sources */,
 				9E5701CA2B553D0300F61C29 /* FootballPitchView.swift in Sources */,
 				9E57012A2B54E37E00F61C29 /* HiddenViewController.swift in Sources */,
+				9E60227D2B562E2200EB7DED /* ComparisonViewModel.swift in Sources */,
 				9E57010C2B54A4D300F61C29 /* LastSearchedCoordinator.swift in Sources */,
 				9E5701B42B553AA000F61C29 /* LastSearchedPlayerInfo.swift in Sources */,
 				9E5701A62B55389300F61C29 /* NetworkCaller.swift in Sources */,
@@ -874,6 +903,7 @@
 				9E608F502B5349F3007A1C5E /* AppDelegate.swift in Sources */,
 				9E5701AA2B55398600F61C29 /* PlayerSearchCollectionViewCell.swift in Sources */,
 				9E608F5A2B5349F3007A1C5E /* PitchGraphOpenSource.xcdatamodeld in Sources */,
+				9E6022852B56309500EB7DED /* ComparisonCell.swift in Sources */,
 				9E5701D22B553D9700F61C29 /* OctagonView.swift in Sources */,
 				9E5701F12B5540EF00F61C29 /* StatsViewModel.swift in Sources */,
 				9E5701262B54E37500F61C29 /* TechnicalViewController.swift in Sources */,
@@ -888,10 +918,13 @@
 				9E5701C02B553C1700F61C29 /* MinMaxAdjusterView.swift in Sources */,
 				9E5701A42B55385C00F61C29 /* PlayerSearchViewModel.swift in Sources */,
 				9E5701762B55224C00F61C29 /* StatsMode.swift in Sources */,
+				9E6022752B562BF800EB7DED /* SearchTwoPlayersViewController.swift in Sources */,
 				9E57018A2B5530B600F61C29 /* CloudStatusViewController.swift in Sources */,
+				9EC67A552B563527005C4E1D /* SearchTwoCoordinator.swift in Sources */,
 				9E60225A2B55F36500EB7DED /* PhysicalAttributeCell.swift in Sources */,
 				9E5701F52B55419400F61C29 /* LegendView.swift in Sources */,
 				9E5701062B54A3F800F61C29 /* ComparisonViewController.swift in Sources */,
+				9E6022832B56307200EB7DED /* PlayerComparison.swift in Sources */,
 				9E5701CC2B553D3100F61C29 /* FootballPitchViewModel.swift in Sources */,
 				9E57018E2B55313200F61C29 /* CloudStatusHeaderView.swift in Sources */,
 				9E5701942B55320C00F61C29 /* CloudStatusError.swift in Sources */,
@@ -914,6 +947,7 @@
 				9E5701922B5531C900F61C29 /* CloudStatus.swift in Sources */,
 				9E57011B2B54E33800F61C29 /* WhatsNewViewController.swift in Sources */,
 				9E5701B82B553B3700F61C29 /* CustomRangeSlider.swift in Sources */,
+				9E6022792B562D9B00EB7DED /* PlayerView.swift in Sources */,
 				9E5701D62B553DD200F61C29 /* OctagonData.swift in Sources */,
 				9E6022502B55F25C00EB7DED /* TwoGoalKeeperAttributeCell.swift in Sources */,
 				9E5701042B54A3F100F61C29 /* LastSearchedViewController.swift in Sources */,
@@ -931,6 +965,7 @@
 				9E5701E72B55401200F61C29 /* ProfileViewModel.swift in Sources */,
 				9E57017C2B5522D200F61C29 /* TwoTechnicalCollectionViewCell.swift in Sources */,
 				9E60225C2B55F37A00EB7DED /* TwoPhysicalAttributeCell.swift in Sources */,
+				9E6022812B56305800EB7DED /* CompareComparisonViewModel.swift in Sources */,
 				9E57015F2B551EA500F61C29 /* Option.swift in Sources */,
 				9E5701202B54E36400F61C29 /* BaseCollectionViewController.swift in Sources */,
 				9E57019A2B5532F800F61C29 /* NetworkService.swift in Sources */,
@@ -947,6 +982,7 @@
 				9E57017E2B55230800F61C29 /* ReusableCellConfiguring.swift in Sources */,
 				9E5701562B5507FB00F61C29 /* SettingsSectionHeaderView.swift in Sources */,
 				9E5701A02B5535CB00F61C29 /* WhatsNewCoordinator.swift in Sources */,
+				9E60227F2B56303D00EB7DED /* CompareColumnViewController.swift in Sources */,
 				9E5701722B5520C100F61C29 /* MentalAttribute.swift in Sources */,
 				9E5701B62B553B0F00F61C29 /* ParameterViewController.swift in Sources */,
 				9E5701542B5507D500F61C29 /* SettingsAction.swift in Sources */,

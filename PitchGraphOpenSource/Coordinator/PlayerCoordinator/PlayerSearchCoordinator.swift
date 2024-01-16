@@ -26,9 +26,8 @@ final class PlayerSearchCoordinator: ChildCoordinator {
     func start() {
         let userDefaultsManager = UserDefaultsManager.shared
         let playerSearchViewModel = PlayerSearchViewModel()
-        let playerCoordinator = PlayerSearchCoordinator(navigationController: navigationController)
         let playerSearchViewController = PlayerSearchViewController(
-            coordinator: playerCoordinator,
+            coordinator: self,
             viewModel: playerSearchViewModel,
             userDefaultsManager: userDefaultsManager
         )

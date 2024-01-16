@@ -68,5 +68,12 @@ extension MainCoordinator {
         addChild(playerCoordinator)
         playerCoordinator.start()
     }
+    
+    func compareScreen(navigationController: UINavigationController) {
+        let compareCoordinator = ComparisonCoordinator(navigationController: navigationController)
+        compareCoordinator.parent = self
+        addChild(compareCoordinator)
+        compareCoordinator.start()
+    }
 }
 

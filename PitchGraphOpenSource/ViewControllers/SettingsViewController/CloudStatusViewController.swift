@@ -71,7 +71,7 @@ final class CloudStatusViewController: UIViewController {
     // MARK: - Coordinator
     
     /// Coordinator responsible for navigation and flow control from this view controller.
-    private var coordinator: CloudStatusCoordinator?
+    private weak var coordinator: CloudStatusCoordinator?
     
     // MARK: - Initializers
     

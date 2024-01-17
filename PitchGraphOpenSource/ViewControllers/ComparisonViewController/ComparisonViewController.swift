@@ -65,7 +65,7 @@ final class ComparisonViewController: UIViewController {
         private var viewModel: ComparisonViewModel
         
         /// Coordinator for navigation logic.
-        private var coordinator: ComparisonCoordinator?
+        private weak var coordinator: ComparisonCoordinator?
         
         /// Manager for user preferences and settings.
         private let userDefaults: UserDefaultsManaging

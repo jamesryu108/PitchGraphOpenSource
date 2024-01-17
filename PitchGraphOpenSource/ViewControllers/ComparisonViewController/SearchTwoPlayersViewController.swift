@@ -74,7 +74,7 @@ final class SearchTwoPlayersViewController: UIViewController {
     
     // MARK: - Coordinator
     /// Coordinator for managing navigation and flow.
-    private var coordinator: SearchTwoCoordinator?
+    private weak var coordinator: SearchTwoCoordinator?
     
     /// Search controller to manage player search.
     lazy var searchController = UISearchController(searchResultsController: ResultsViewController(userDefaultManager: userDefaultsManager))

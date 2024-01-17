@@ -33,7 +33,7 @@ final class ParameterViewController: UIViewController {
     // MARK: - Coordinator
     
     // Coordinator for handling navigation.
-    private var coordinator: Coordinator?
+    private weak var coordinator: Coordinator?
 
     // MARK: - UI Components
     

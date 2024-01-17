@@ -34,7 +34,7 @@ final class WhatsNewViewController: UIViewController, UICollectionViewDataSource
     // MARK: - Coordinator
     
     /// The coordinator responsible for navigation logic.
-    private var coordinator: WhatsNewCoordinator?
+    private weak var coordinator: WhatsNewCoordinator?
     
     // MARK: - Initializers
     

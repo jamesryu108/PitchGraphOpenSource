@@ -43,7 +43,7 @@ final class PlayerSearchViewController: UIViewController {
     }()
     
     // MARK: - Properties
-    var coordinator: PlayerSearchCoordinator?
+    weak var coordinator: PlayerSearchCoordinator?
     
     /// Diffable data source for managing collection view data.
     private var dataSource: UICollectionViewDiffableDataSource<Section, PlayerData>!
@@ -420,41 +420,3 @@ extension PlayerSearchViewController: ParameterViewControllerDelegate {
         fetchSearchResults(for: viewModel.name ?? "", searchParameter: searchParameter)
     }
 }
-
-//final class PlayerSearchViewController: UIViewController {
-//    
-//    weak var coordinator: PlayerCoordinator?
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        // Create a new button
-//        let button = UIButton(type: .system) // .system gives you a basic button
-//        button.setTitle("Search", for: .normal) // Set the button title
-//
-//        // Style the button (optional)
-//        button.backgroundColor = .blue
-//        button.setTitleColor(.white, for: .normal)
-//        button.layer.cornerRadius = 10
-//        button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-//
-//        // Add the button to the view
-//        view.addSubview(button)
-//
-//        // Disable autoresizing masks and set up constraints
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            button.widthAnchor.constraint(equalToConstant: 100), // Set the width of the button
-//            button.heightAnchor.constraint(equalToConstant: 40) // Set the height of the button
-//        ])
-//
-//        // Optional: Add an action to the button
-//        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//    }
-//
-//    @objc func buttonTapped() {
-//        coordinator?.navigateToSettings()
-//    }
-//}

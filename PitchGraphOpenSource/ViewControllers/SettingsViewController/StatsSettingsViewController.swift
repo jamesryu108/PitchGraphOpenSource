@@ -25,7 +25,7 @@ final class StatsSettingsViewController: UIViewController {
     // MARK: - Coordinator
     
     /// Coordinator responsible for navigation and flow control from this view controller.
-    private var coordinator: StatsSettingsCoordinator?
+    private weak var coordinator: StatsSettingsCoordinator?
     
     // MARK: - View Models
     

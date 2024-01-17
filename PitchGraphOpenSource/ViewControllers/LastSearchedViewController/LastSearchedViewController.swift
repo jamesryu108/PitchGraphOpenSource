@@ -51,7 +51,7 @@ final class LastSearchedViewController: UIViewController {
     private let viewModel: LastSearchViewModel
         
     /// Coordinator for managing navigation flow.
-    private var coordinator: LastSearchedCoordinator?
+    private weak var coordinator: LastSearchedCoordinator?
                 
     /// Set of cancellable objects for managing memory in Combine.
     private var cancellables = Set<AnyCancellable>()

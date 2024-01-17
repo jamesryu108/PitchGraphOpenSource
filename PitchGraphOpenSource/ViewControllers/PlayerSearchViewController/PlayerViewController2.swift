@@ -46,7 +46,7 @@ final class PlayerViewController2: CoreDataObservingViewController {
     // MARK: - Coordinator
     
     /// The coordinator responsible for navigation and flow logic.
-    private var coordinator: Coordinator?
+    private weak var coordinator: Coordinator?
     
     // MARK: - View Model
     

@@ -38,3 +38,7 @@ The PitchGraph app (Open-sourced) has three sections:
 * Localization (Korean)
 * Get all players from the entire Football Manager 24 database.
 * Great UI.
+
+# Special thanks to
+* Maysam Shahsavari for his article on Coordinator, which aided in understanding of the architecture: https://medium.com/@maysam.shahsavari/a-comprehensive-guide-to-coordinator-pattern-in-swift-7e7647ecc525
+

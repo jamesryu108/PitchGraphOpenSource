@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		ieoIC3BDXpwfgymilDlABXMPtEU=
+		zUgI9vLYA+UXXFwJs3jHOFkagO8=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		eNgIOcjrA+QMhyplniuKXK9+/Gc=
+		2ZtPy73a6EG2GNIfBXoItcygClE=
 		</data>
 		<key>PitchGraphOpenSource.momd/PitchGraphOpenSource.mom</key>
 		<data>
@@ -83,14 +83,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>stagingTest.yaml</key>
-		<data>
-		yeGLxLKy5hoU2FqD2tOCiyKGC30=
-		</data>
-		<key>stagingTest2.yaml</key>
-		<data>
-		0T2DKvMYUDl1JtoKKyC4NBleMmQ=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -105,7 +97,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lGe5vTNiuHjUOwC9wAwVQIbRPmzuu5NVqkrzak62uvo=
+			l6+Vt+I8KfYeHwQeHkfK3CdRGQbCCf+7ODSLS/Bl3qM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -197,20 +189,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>stagingTest.yaml</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Zxdf0jKiu3I/jUdY7REWPlZk1QonKKhfFGukS+O+f9Q=
-			</data>
-		</dict>
-		<key>stagingTest2.yaml</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RlfXOIj7j0YmSscMRO1oj1mfmHWexN4aHfilYVR6TBY=
-			</data>
 		</dict>
 	</dict>
 	<key>rules</key>

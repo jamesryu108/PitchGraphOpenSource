@@ -592,13 +592,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		9E57013C2B54E48F00F61C29 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		9E57013D2B54E4A300F61C29 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,7 +693,6 @@
 				9E57013E2B54E4C000F61C29 /* DataModels */,
 				9E57013D2B54E4A300F61C29 /* Extensions */,
 				9E57013B2B54E47D00F61C29 /* Managers */,
-				9E57013C2B54E48F00F61C29 /* Network */,
 				9E5700FD2B54A31D00F61C29 /* ViewControllers */,
 				9E57013A2B54E46F00F61C29 /* ViewModels */,
 				9E5701382B54E40D00F61C29 /* Utilities */,
